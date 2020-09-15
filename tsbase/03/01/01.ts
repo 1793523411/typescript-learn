@@ -1,10 +1,13 @@
+//!布尔值
 let isDone: boolean = false;
 
+//!数字
 let decLiteral: number = 6;
 let hexLiteral: number = 0xf00d;
 let binaryLiteral: number = 0b1010;
 let octalLiteral: number = 0o744;
 
+//!字符串
 let names: string = "bob";
 names = "smith";
 
@@ -22,12 +25,14 @@ let sentence2: string =
   (age + 1) +
   " years old next month.";
 
+  //!数组
 //   TypeScript像JavaScript一样可以操作数组元素。 有两种方式可以定义数组。 第一种，可以在元素类型后面接上 []，表示由此类型元素组成的一个数组
 let list: number[] = [1, 2, 3];
 
 // 第二种方式是使用数组泛型，Array<元素类型>：
 let list2: Array<number> = [1, 2, 3];
 
+//!元组 Tuple
 // 元组类型允许表示一个已知元素数量和类型的数组，各元素的类型不必相同。 比如，你可以定义一对值分别为 string和number类型的元组
 
 // Declare a tuple type
@@ -51,6 +56,7 @@ console.log(x[0].substr(1)); // OK
 
 // enum类型是对JavaScript标准数据类型的一个补充。 像C#等其它语言一样，使用枚举类型可以为一组数值赋予友好的名字
 
+//!枚举
 enum Color {Red, Green, Blue}
 let c: Color = Color.Green;
 
@@ -67,6 +73,7 @@ let colorName: string = Color4[2];
 
 console.log(colorName);  // 显示'Green'因为上面代码里它的值是2
 
+//!Any
 // 有时候，我们会想要为那些在编程阶段还不清楚类型的变量指定一个类型。 这些值可能来自于动态的内容，比如来自用户输入或第三方代码库。 这种情况下，我们不希望类型检查器对这些值进行检查而是直接让它们通过编译阶段的检查。 那么我们可以使用 any类型来标记这些变量
 
 let notSure: any = 4;
@@ -90,12 +97,13 @@ function warnUser(): void {
     console.log("This is my warning message");
 }
 
+//!Void
 // 声明一个void类型的变量没有什么大用，因为你只能为它赋予undefined和null：
 
 let unusable: void = undefined;
 
 // TypeScript里，undefined和null两者各自有自己的类型分别叫做undefined和null。 和 void相似，它们的本身的类型用处不是很大
-
+//!Null 和 Undefined
 // Not much else we can assign to these variables!
 let u: undefined = undefined;
 let n: null = null;
@@ -106,6 +114,7 @@ let n: null = null;
 
 // never类型是任何类型的子类型，也可以赋值给任何类型；然而，没有类型是never的子类型或可以赋值给never类型（除了never本身之外）。 即使 any也不可以赋值给never。
 
+//!Never
 // 返回never的函数必须存在无法达到的终点
 function error(message: string): never {
     throw new Error(message);
@@ -122,6 +131,7 @@ function infiniteLoop(): never {
     }
 }
 
+//!Object
 // object表示非原始类型，也就是除number，string，boolean，symbol，null或undefined之外的类型。
 
 // 使用object类型，就可以更好的表示像Object.create这样的API。例如：
@@ -136,7 +146,7 @@ create(null); // OK
 // create(false); // Error
 create(undefined); // Error
 
-
+//!类型断言
 // 有时候你会遇到这样的情况，你会比TypeScript更了解某个值的详细信息。 通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型
 
 // 通过类型断言这种方式可以告诉编译器，“相信我，我知道自己在干什么”。 类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。 它没有运行时的影响，只是在编译阶段起作用。 TypeScript会假设你，程序员，已经进行了必须的检查
@@ -152,5 +162,5 @@ let someValue2: any = "this is a string";
 let strLength2: number = (someValue2 as string).length;
 
 // 两种形式是等价的。 至于使用哪个大多数情况下是凭个人喜好；然而，当你在TypeScript里使用JSX时，只有 as语法断言是被允许的
-
+//!关于let
 // 尽可能地使用let来代替var吧
