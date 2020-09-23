@@ -137,3 +137,55 @@ function sum(/* numbers */) {
   }
   return total;
 }
+
+
+//!未指定的类型参数默认为any
+
+// import { Component } from "react";
+
+// class MyComponent extends Component {
+//     render() {
+//         this.props.b; // Allowed, since this.props is of type any
+//     }
+// }
+
+// import { Component } from "react";
+
+// /**
+//  * @augments {Component<{a: number}, State>}
+//  */
+// class MyComponent extends Component {
+//     render() {
+//         this.props.b; // Error: b does not exist on {a:number}
+//     }
+// }
+
+// 在JSDoc引用中：JSDoc里未指定的类型参数默认为any：
+/** @type{Array} */
+var x = [];
+
+x.push(1);        // OK
+x.push("string"); // OK, x is of type Array<any>
+
+/** @type{Array.<number>} */
+var y = [];
+
+y.push(1);        // OK
+y.push("string"); // Error, string is not assignable to number
+
+// 在函数调用中
+var p = new Promise((resolve, reject) => { reject() });
+
+p; // Promise<any>;
+
+// 支持的JSDoc
+
+
+// @param语法和@type相同，但增加了一个参数名。 使用[]可以把参数声明为可选的,@return:函数的返回值类型也是类似的
+// @typedef可以用来声明复杂类型。 和@param类似的语法
+// @callback与@typedef相似，但它指定函数类型而不是对象类型
+// 使用@template声明泛型
+// 编译器通过this属性的赋值来推断构造函数，但你可以让检查更严格提示更友好，你可以添加一个@constructor标记
+//编译器通常可以通过上下文来推断出this的类型。但你可以使用@this来明确指定它的类型
+// 当JavaScript类继承了一个基类，无处指定类型参数的类型。而@extends标记提供了这样一种方式,注意@extends只作用于类。当前，无法实现构造函数继承类的情况。
+// @enum标记允许你创建一个对象字面量，它的成员都有确定的类型。不同于JavaScript里大多数的对象字面量，它不允许添加额外成员
