@@ -1,0 +1,1 @@
+// let createdByNewBoolean: boolean = new Boolean(1);
