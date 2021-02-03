@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\hp\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add ts-node typesccript
+
+PATH: 
+  D:\computer\go\bin;C:\Python39\Scripts\;C:\Python39\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files\Java\jdk1.8.0_121\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\QuickTime\QTSystem\;%G;ROOT%\bin;C:\Program Files\PuTTY\;C:\Program Files\Calibre2\;D:\Database\Redis\Redis\;D:\msys64\mingw64\bin\;D:\msys64\usr\bin\;C:\Users\hp\AppData\Local\atom\bin;C:\Program Files\Java\jdk1.8.0_121\jre\bin;D:\Android\tools;D:\Android\platform-tools;D:\Android\build-tools;D:\Program Files\VisualSVN Server\bin;D:\Program Files\TortoiseSVN\bin;C:\Users\hp\AppData\Local\atom;D:\flutter\flutter_windows_v1.12.13+hotfix.8-stable\flutter\bin;C:\Program Files\Pandoc\;C:\Program Files (x86)\ZeroTier\One\;D:\Program Files (x86)\LinkChecker;D:\computer\go\bin;F:\maven\apache-maven-3.6.3\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\hp\.windows-build-tools\python27\;C:\Users\hp\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\hp\AppData\Local\Programs\Python\Python37\;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\hp\go\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\Program Files\Git\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;D:\blog\hugo;D:\Program Files\Gtk+\bin;D:\computer\liteidex32.1.windows-qt4\liteide\bin;D:\web\Sublime Text\Sublime Text 3 优化版;D:\msys64\mingw64\bin;D:\msys64\usr\bin;D:\computer\vim\vim80;C:\Users\hp\AppData\Local\Yarn\bin;D:\Program Files (x86)\LinkChecker;C:\Users\hp\go\bin;E:\desktop\start\Gatsby\pngquant-windows\pngquant;C:\Users\hp\AppData\Roaming\npm
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  14.15.4
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/typesccript: Not found
+      at Request.params.callback [as _callback] (C:\Users\hp\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66947:18)
+      at Request.self.callback (C:\Users\hp\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140665:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (C:\Users\hp\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141637:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (C:\Users\hp\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141559:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "middle",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
