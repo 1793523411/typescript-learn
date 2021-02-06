@@ -6,4 +6,4 @@ tsbase 为基础知识学习，该目下本地安装了 ts-node 和 typescript,�
 
 阅读 Typescript 入门教程
 
-阅读深入浅出 Typescript
+阅读 深入理解 Typescript
