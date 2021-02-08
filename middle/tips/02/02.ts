@@ -1,3 +1,5 @@
+//状态函数
+
 const { called } = new class {
     count = 0;
     called = () => {
